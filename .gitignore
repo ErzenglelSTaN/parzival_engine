@@ -1,6 +1,3 @@
-#Prerequisites
-! ./Prerequisites/
-
 # Compiled Object files
 *.slo
 *.lo
@@ -30,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+#Prerequisites
+! ./needed/*.exe
+
