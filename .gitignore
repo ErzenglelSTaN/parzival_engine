@@ -1,3 +1,6 @@
+#Prerequisites
+!./Prerequisites/
+
 # Compiled Object files
 *.slo
 *.lo
