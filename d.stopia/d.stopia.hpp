@@ -143,7 +143,33 @@ public:
 	// ret : bool = TRUE if binding was created, FALSE if binding exists or not possible //
 	DSTOPIA_API bool DevelopBinding(int baseObject, int subObject);
 
+	// Finds first object found with given identifier //
+	// ret : int = index of object, -1 if no object found //
+	DSTOPIA_API int Find(const char* identifier);
 
+	// Finds all objects matching identifier //
+	// ret : int* = array of indices of objects, NULL if no objects found //
+	DSTOPIA_API int* FindAll(const char* identifier);
+
+	// Looks if one or more objects matching identifier exists //
+	// ret : bool = TRUE if exists, FALSE if not //
+	DSTOPIA_API bool Exists(const char* identifier);
+
+	// Looks if multiple matching objects exist //
+	// ret : bool = TRUE if multiple exist, FALSE if one or none //
+	DSTOPIA_API bool ExistsMultiple(const char* identifier);
+
+	// Looks if matching object only exists once //
+	// ret : bool = TRUE if exists only once, FALSE if multiple or none //
+	DSTOPIA_API bool ExistsOnce(const char* identifier);
+
+	// Sets a camera to scene //
+	DSTOPIA_API void SetCamera();
+
+	// Binds camera to object //
+	// ret : bool = TRUE if done, FALSE if not //
+	// param 2 : TRUE will override a bind if it exists, default FALSE //
+	DSTOPIA_API bool BindCamera(int object, bool overrideBind = FALSE);
 };
 
 class DstopiaDriver
